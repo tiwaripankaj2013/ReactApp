@@ -5,7 +5,8 @@ import UseContextHook from "./component/useContext";
 import ToodoTaskClassComponent from "./component/class/Todo";
 import TodoFunctionalComponent from "./component/functional/ToDo";
 import UserReducerHooks from "./component/userReducer";
-
+import { Redux } from "./component/redux";
+import { UseMemoHooks } from "./component/useMemo";
 function App() {
   // class component
 
@@ -41,7 +42,18 @@ function App() {
           {/*  useReducer hooks  example */}
           <UserReducerHooks />
         </div>
+        <div className="w-4/12">
+          {/*  Redux  example */}
+          <Redux />
+        </div>
       </div>
+      <div className="mt-10 flex">
+        <div className="w-4/12">
+          {/*  context provide usecontext hooks example */}
+          <UseMemoHooks />
+        </div>
+        </div>
+
     </div>
   );
 }

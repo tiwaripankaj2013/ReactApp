@@ -1,16 +1,30 @@
-import React, { useState } from 'react';
-import ChildComponent from './childComponent';
+import React, { useMemo, useState } from 'react';
 
 export const UseMemoHooks = () => {
-   const [count, setCount] = useState(0);
-   const [data, setData] = useState(0);
+const [counter,setCouter] = useState(0);
+const [counterTwo,setCouterTwo] = useState(0);
+
+const increment = () =>{
+   setCouter(counter +1);
+}
+const incrementTwo = () =>{
+   setCouterTwo(counterTwo +1);
+}
+// use memo hooks memorize the result 
+const isEven = useMemo(()=>{
+   let i =0;
+   while(i<200000) i++
+   return counter %2 ===0
+},[counter])
   return (
     <div>
-       <p>Use Memo hooks </p>
-       <p>{count}</p>
-      <ChildComponent data={data} />
-      <button className=" bg-teal-900 text-gray-50 px-2 py-1 mx-1.5" onClick={()=>setCount(count + 1)}>count</button>
-      <button className=" bg-teal-500 text-gray-100 px-2 py-1" onClick={()=>setData(data + 1)}>Updata Data In Child </button>
+       <div className='mb-4'>
+       <button className='inline-block mx-2 bg-blue-800 text-white' onClick={increment}> count {counter}</button>
+       <span className='inline-block mx-3 px-1'>{isEven ? 'even' :'odd'}</span>
+       </div>
+       <div>
+       <button className=' bg-violet-800 text-white rounded' onClick={incrementTwo}> count {counterTwo}</button> 
+       </div>
     </div>
   )
 }

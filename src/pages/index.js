@@ -7,8 +7,9 @@ import ToodoTaskClassComponent from "../component/class/Todo";
 import TodoFunctionalComponent from "../component/functional/ToDo";
 import UserReducerHooks from "../component/userReducer";
 import { Redux } from "../component/redux";
-import { UseMemoHooks } from "../component/useMemo";
-
+import { MemoHooks } from "../component/memo";
+import { UseMemoHooks } from '../component/useMemo';
+import UseCallBack from '../component/useCallBack';
 export const Home = () => {
   return (
    <div className=" bg-gray-100 p-4">
@@ -49,8 +50,17 @@ export const Home = () => {
       </div>
       <div className="mt-10 flex">
         <div className="w-4/12">
-          {/*  context provide usecontext hooks example */}
+          <p>React.momo</p>
+          {/*  context provide  hooks example */}
+          <MemoHooks />
+        </div>
+        <div className="w-4/12">
+          {/*  context provide useMemo  hooks example */}
           <UseMemoHooks />
+        </div>
+        <div className="w-4/12">
+          {/*  context provide useCallBack  hooks example */}
+          <UseCallBack />
         </div>
         </div>
 

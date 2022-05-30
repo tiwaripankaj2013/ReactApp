@@ -15,9 +15,8 @@ function App() {
     <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route exact path="/user" element={<User />}>
-        <Route path=":id" element={<UserDetails />} />
-        </Route>
+        <Route exact path="/user" element={<User />} />
+        <Route exact path="/user/:id" element={<UserDetails />} /> 
         <Route exact path="/hoc"  element={<HigherOrderComponent />} />
         
         <Route path="*"  element={<PageNotFound/>} />

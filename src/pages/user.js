@@ -100,7 +100,8 @@ export const User = () => {
                   <td>{user.email}</td>
                   <td>{user.phone}</td>
                   <td>
-                    <Link to={`${user.id}`}
+
+                    <Link to={`/user/${user.id}`}
                       className=" bg-purple-800 rounded text-white px-3 py-1 inline-block mb-1"
                     >
                       Details

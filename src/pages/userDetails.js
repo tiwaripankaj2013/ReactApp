@@ -33,13 +33,13 @@ export const UserDetails = () => {
   console.log(user);
   if (user) {
     return (
-      <div className="container">
+      <div className="container mx-auto my-6">
         <h2>userDetails</h2>
-        <p>{user.name}</p>
-        <p>{user.email}</p>
-        <p>{user.username}</p>
-        <p>{user.website}</p>
-        <p>{user.phone.split(' ').slice(0,1)}</p>
+        <p className=" text-gray-700">{user.name}</p>
+        <p className=" text-gray-700">{user.email}</p>
+        <p className=" text-gray-700">{user.username}</p>
+        <p className=" text-gray-700">{user.website}</p>
+        <p className=" text-gray-700">{user.phone.split(' ').slice(0,1)}</p>
       </div>
     );
   }

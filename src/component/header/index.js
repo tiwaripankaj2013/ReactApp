@@ -9,6 +9,7 @@ import { Link, NavLink } from 'react-router-dom';
           {/* <li className="list-item"><Link path="/about">About</Link> </li> */}
           <li className="list-item text-gray-50 px-2"><NavLink to="/user">User List</NavLink> </li>
           <li className="list-item text-gray-50 px-2"><NavLink to="/hoc">HOC</NavLink> </li>
+          <li className="list-item text-gray-50 px-2"><NavLink to="/animtion">Animation</NavLink> </li>
        </ul>
     </header>
   )

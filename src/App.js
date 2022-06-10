@@ -5,7 +5,7 @@ import { Home } from "./pages";
 import PageNotFound from './pages/pageNotFound';
 import { User } from "./pages/user";
 import { UserDetails } from './pages/userDetails';
-
+import Animation from './component/modal';
 function App() {
   // class component
 
@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/user" element={<User />} />
         <Route exact path="/user/:id" element={<UserDetails />} /> 
         <Route exact path="/hoc"  element={<HigherOrderComponent />} />
+        <Route exact path="/animtion"  element={<Animation />} />
         
         <Route path="*"  element={<PageNotFound/>} />
            

@@ -5,6 +5,8 @@ import UseContextHook from "./component/useContext";
 import ToodoTaskClassComponent from "./component/class/Todo";
 import TodoFunctionalComponent from "./component/functional/ToDo";
 import UserReducerHooks from "./component/userReducer";
+import Greetings from "./component/testCase/greetings";
+import Async from "./component/testCase/async";
 
 function App() {
   // class component
@@ -41,6 +43,10 @@ function App() {
           {/*  useReducer hooks  example */}
           <UserReducerHooks />
         </div>
+      </div>
+      <div className="mt-10 flex">
+        <Greetings />
+        <Async/>
       </div>
     </div>
   );

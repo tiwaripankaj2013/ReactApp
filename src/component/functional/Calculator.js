@@ -1,10 +1,12 @@
 import React,{useState} from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-
+import Greetings from "../testCase/greetings";
 export const Calculator = () => {
    const {calValue, SetcalValue} = useState(0);
   return (
+    <>
+    <Greetings />
     <div className="bg-gray-200">
       <div className=" max-w-sm border-2 border-violet-800 mx-auto shadow-xl">
          <div className="max-w-[12rem] mx-auto">
@@ -42,5 +44,6 @@ export const Calculator = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
